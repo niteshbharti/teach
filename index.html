@@ -1,0 +1,660 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+       <style type="text/css">
+          .topbar{
+               
+                border-left: 1px #CCCCCC solid;
+              border-left-color: brown;
+                height: 100%;
+              padding-left: 15px;
+              padding-right: 2px;
+          }
+          html{
+              background: url(img1.jpg) no-repeat center center fixed;
+              -webkit-background-size: cover;
+              -moz-background-size: cover;
+              -o-background-size: cover;
+              background-size: cover;
+              padding-top: 75px;
+              
+            
+          }
+          body, html {
+          height: 100%;
+          margin: 0;
+         }
+
+    .bg {
+      /* The image used */
+       background-image: url("img.jpg");
+
+      /* Full height */
+      height: 50%; 
+
+     /* Center and scale the image nicely */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    
+      }
+    body {font-family: Arial, Helvetica, sans-serif;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: white;
+  color: black;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+button1{
+  background-color: green;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 50%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: Arial;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}   
+
+    body {
+  margin: 0;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+          .bg1{
+  /* The image used */
+  background-color: white;
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+            .bg2{
+      /* The image used */
+       background-color: rosybrown;
+
+      /* Full height */
+      height: 55%; 
+
+     /* Center and scale the image nicely */
+      background-position: all;
+      background-repeat: no-repeat;
+      background-size: cover;
+    
+      }
+           .left{
+               font-family: monospace;
+               color: white;
+               padding: 8px;
+           }
+body {font-family: Arial, Helvetica, sans-serif;}
+
+form1{
+  border: 3px ;
+  font-family: Arial;
+    float: right;
+    padding-right: 50px;
+    padding-top: 28px;
+
+}
+
+.container1{
+  padding: 5px;
+  background-color: #f1f1f1;
+}
+
+input[type=text], input[type=submit] {
+  width: 50%;
+  padding: 12px;
+
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+input[type=checkbox] {
+  margin-top: 16px;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+}
+
+input[type=submit]:hover {
+  opacity: 0.8;
+}
+      </style>
+
+      <title>TUTORS</title>
+  </head>
+  <body>
+  
+          <div class="container-fluid"  style="background-color: rgba(5, 12, 12, 0.007)">
+      <nav class="navbar navbar-expand-lg navbar-dark navbar fixed-top" style="background-color:#5B2559; opacity: 1.2">
+        <a class="navbar-brand" href="#"><img src="logo.png" style="height:46px;padding-left:15px;"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown" style="padding-left:33px;font-size: 20px;">
+            <ul class="navbar-nav" >
+              <li class="nav-item active" >
+                <a class="nav-link text-white btn btn-outline-dark" href="#" style="padding: 10px;"><i class="fa fa-home" aria-hidden="true"></i><b>Home</b></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link text-white btn btn-outline-dark" href="#" style="padding: 10px;" ><i class="fas fa-users"></i><b>About Us</b></a>
+              </li>
+              <li class="nav-item dropdown active">
+                <a class="nav-link text-white dropdown-toggle btn btn-outline-dark" href="#" id="navbarDropdownMenuLink" style="padding: 10px;" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i style='font-size:24px; padding-right:8px' class="fas fa-graduation-cap"></i><b>Student</b>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                 <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">LOGIN</button>
+
+             <div id="id01" class="modal">
+  
+             <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="img1.jpg" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+        <button1 type="submit"><center>Login</center></button1>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw"><a href="#">Forgot password?</a></span>
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+        
+                  <a class="dropdown-item" href="#">REGISTER</a>
+                  
+                </div>
+                
+              </li>
+            
+              <li class="nav-item dropdown active">
+                <a class="nav-link text-white dropdown-toggle btn btn-outline-dark" href="#" id="navbarDropdownMenuLink" style="padding: 10px;"role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i style='font-size:24px; padding-right:8px' class="fas fa-address-card"></i><b>Teacher Section</b>
+                </a>
+                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">LOGIN</button>
+
+             <div id="id01" class="modal">
+  
+             <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="img1.jpg" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+        <button1 type="submit"><center>Login</center></button1>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw"><a href="#">Forgot password?</a></span>
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+        
+        <a class="dropdown-item" href="#">REGISTER</a>
+                  
+                </div>
+              </li>
+                  <li class="nav-item active">
+                <a class="nav-link text-white btn btn-outline-dark" href="#" style="padding-bottom:4px;"><i style="font-size:28px; padding-right:8px" class="fa">&#xf2b5;</i>&nbsp;<b>Contact Us</b></a>
+              </li>
+              <li class="nav-item text-white active" style="color:blue">
+                <a href="tel:+919959695016" class="nav-link text-white btn btn-outline-dark" style="padding:14px"  ><i style='font-size:24px' class='fas'>&#xf095;</i>&nbsp;+91 9123119925</a>
+              </li>
+  
+            </ul>
+            </div>
+
+          
+        </nav>
+      </div>
+      <div class="bg">
+          
+         
+          <img src="img2.jpg"style="height:200px;padding-left:1000px;margin-top: 60px;">
+          <form class="example" action="/action_page.php" style="margin-top: 0px;max-width:800px;padding-top: -40px;padding-left: 30px">
+  <input type="text" placeholder="Search near your location for tutors..." name="search2">
+  <button type="submit"><i class="fa fa-search"></i></button>
+</form>
+
+
+</div>
+      <div class="bg1">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="img3.jpg" style="width:100%;height: 400px">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="img4.png" style="width:100%;height: 400px">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="img5.jpeg" style="width:100%;height: 400px">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="img7.jpg" style="width:100%;height: 400px">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="img6.jpg" style="width:100%;height: 400px">
+  </div>
+    <div class="mySlides">
+    <div class="numbertext">6/ 6</div>
+    <img src="img8.jpg" style="width:100%;height: 400px">
+  </div>
+    
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="img3.jpg" style="width:108%;height: 150px" onclick="currentSlide(1)" alt="The Teacher">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img4.png" style="width:108%;height: 150px" onclick="currentSlide(2)" alt="Importance of Personel Tutors">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img5.jpeg" style="width:108%;height: 150px" onclick="currentSlide(3)" alt="Thinkability">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img7.jpg" style="width:108%;height: 150px" onclick="currentSlide(4)" alt="Classroom">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img6.jpg" style="width:108%;height: 150px" onclick="currentSlide(5)" alt="Path to Success">
+    </div>
+     <div class="column">
+      <img class="demo cursor" src="img8.jpg" style="width:108%;height: 150px" onclick="currentSlide(6)" alt="Final Goals">
+    </div>
+  </div>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+ 
+    
+       
+      <b><hr></b>
+          <div class="bg2">
+          <form1 action="/action_page.php" style="width: 50%">
+  <div class="container1">
+    <h2>Want to know more? Contact Us</h2>
+    <p>You will receive all the updates regarding your free trial, new courses, teachers, etc...</p>
+  </div>
+
+  <div class="container1" style="background-color:white">
+    <input type="text" placeholder="Name" name="name" required>
+    <input type="text" placeholder="Email address" name="mail" required>
+    <label>
+      <input type="checkbox" checked="checked" name="subscribe">Subscribe to our updates
+    </label>
+  </div>
+
+  <div class="container1">
+    <input type="submit" value="Submit">
+  </div>
+    </form1>
+          <div class="left">
+           <h3>Our Address</h3>
+            <h4>HB-10, One mall Call Center</h4>
+            <h4>City Center</h4>
+            <h4>Sector-4, Bokaro Steel City</h4>
+            <h4>Pin Code - 827004</h4>
+              </div></div></div>
+          
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</html>
